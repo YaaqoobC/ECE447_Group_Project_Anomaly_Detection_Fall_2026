@@ -13,9 +13,14 @@
    - `Amount`: The transaction amount
    - `Class`: (Label, ie. ground truth) 0 if the transaction is genuine and 1 if it is fraudulent.
 
-3. Supervised vs. unsupervised distinction:
+2. Supervised vs. unsupervised distinction and Justification of approach:
 
-   
-    
-4. Justification of approach:
+   For this project we have chose to use ***Unsupervised Learning***.
 
+   The distrinction between the two forms are the following:
+   - With **Supervised Learning** the model is trained using both the transaction features and the explicit labels (ie. class). This means learning a specific decision boundary between known historical "Fraud" and known historical "Genuine" transactions.
+   - With **Unsupervised Learning** the model is trained purely on the transaction features (ie. v1-v28) without any access to the labels. This means that the model learns the underlying math structure of the data to flag points that greatly deviate from the majority.
+
+   The justification for choosing unsupervised learning is the following;
+      - we want to be able to flag a transation that would most likely not be similar to something done historically. In other words, with a supervised learning model we are focused on catching historicall forms of fraud, if a modern attach was made, the model would likely not be able to catch it.
+     - Algorithms recomended to us like DBSCAN and Isolation Forest are generally designed to find outliers in unlabeled multidimensional space, these are primed for unsupervised learning.
