@@ -7,7 +7,7 @@
 ## Problem Framing (%15)
 1. Clear definition of anomaly:
 
-   Given our dataset, credit card fraud detection, the definition of an anomily is a fraudulent credit card transaction. In other words it is a value of 1 in our `Class` feature. Taking a deeper dive, our data has been 'preprocessed' already via a Principal Component Analysis (PCA) to anonymized prior confidential data. This means that our columns are composed of 28 'v' colums (ie. v1, v2, ..., v28), a time column, an ammount column, and a class column.
+   Given our dataset, credit card fraud detection, the definition of an anomily is a fraudulent credit card transaction. In other words it is a value of 1 in our `Class` feature. By doing some quick observation we can see that our of our entire data set a fraudulent case occurs only `0.173%` of the time. Taking a deeper dive, our data has been 'preprocessed' already via a Principal Component Analysis (PCA) to anonymized prior confidential data. This means that our columns are composed of 28 'v' colums (ie. v1, v2, ..., v28), a time column, an ammount column, and a class column:
    - `vX`: 28 numerical anonymized features
    - `Time`: The number of seconds between each transaction and the first transaction in the dataset
    - `Amount`: The transaction amount
@@ -15,6 +15,7 @@
 
 3. Supervised vs. unsupervised distinction:
 
+   
     
 4. Justification of approach:
 
