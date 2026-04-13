@@ -22,5 +22,5 @@
    - With **Unsupervised Learning** the model is trained purely on the transaction features (ie. v1-v28) without any access to the labels. This means that the model learns the underlying math structure of the data to flag points that greatly deviate from the majority.
 
    The justification for choosing unsupervised learning is the following;
-      - we want to be able to flag a transation that would most likely not be similar to something done historically. In other words, with a supervised learning model we are focused on catching historicall forms of fraud, if a modern attach was made, the model would likely not be able to catch it.
-     - Algorithms recomended to us like DBSCAN and Isolation Forest are generally designed to find outliers in unlabeled multidimensional space, these are primed for unsupervised learning.
+      - We want to be able to flag a transition that would most likely not be similar to something done historically. In other words, with a supervised learning model we are focused on catching historical forms of fraud, if a modern attach was made, the model would likely not be able to catch it.
+     - Algorithms recommended to us like DBSCAN and Isolation Forest are generally designed to find outliers in unlabeled multidimensional space, these are primed for unsupervised learning.
