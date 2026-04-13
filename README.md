@@ -28,8 +28,6 @@
 
 ## Part 5 Anomaly visualization:
 ### 5.1:
-What we did, ...
-
 Lets begin by observing the first plot, the ground truth. The first thing we can see is that there are 98 fraud cases that are either clustered near the middle left or scattered around the plot. This tells us our earlier intuition is correct, fraud is diverse, there is teh common fraud 'neighborhood' however there are fraud outliers across the entire board. If we look at the genuine transactions in blue there is no clear pattern but instead an almost scattered cloud. 
 
 Lets now look at the second plot, the `Mahalanobis Distance` (top right). Overall it caught 70 of the 98 fraud cases however what is interesting is that of the 28 misses, almost all of them are ones located in the main cluster of points. MD works by measuring distance from the global mean, with this being said, fraud that happens to look average do not trigger as easily. This is most likely the reason for the performance dip around the common fraud neighborhood as opposed to ones on the outskirts. Following this point we see that most of the FPs (wrongly flagged transactions) are on the outer fringes of the genuine 'cloud'. It is important to note that `MD` preforms the best when it comes to FP, it beats the `KNN` by over double, and `IS` by about 7 times.
